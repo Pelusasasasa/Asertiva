@@ -1,115 +1,93 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { About } from "@/components/About"
+import { Contacto } from "@/components/Contacto"
+import { Form } from "@/components/Form"
+import ServicioCard from "@/components/ServicioCard"
+import { Team } from "@/components/Team"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+ const servicios = [
+  {
+    title: "Redes Sociales",
+    span: "Gesiton completa de redes sociales y community management",
+    items: [
+      "Estrategia de contenido personalizada",
+      "Community management profesional",
+      "Análisis de métricas y engagement",
+      "Gestión de crisis y reputación online",
+      "Creación de contenido visual"
+    ]
+  },
+  
+  {
+    title: "Consultoría Estratégica",
+    span: "Asesoramiento personalizado para el crecimiento y posicionamiento de tu marca",
+    items: [
+      "Análisis de mercado y competencia",
+      "Estrategia de marca y posicionamiento",
+      "Plan de marketing digital integral",
+      "Mentoring empresarial",
+      "Optimización de procesos",
+      "Roadmap de crecimiento"
+    ]
+  },
+  {
+    title: "Diseño & Branding",
+    span: "Creación de identidad visual única y materiales de comunicación impactantes",
+    items: [
+      "Diseño de logotipos y marca",
+      "Identidad corporativa completa",
+      "Material publicitario y promocional",
+      "Diseño para redes sociales",
+      "Packaging y etiquetas",
+      "Guía de estilo de marca"
+    ]
+  },
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+ ]
 
-export default function Home() {
+ const index = () => {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="to-pink-50 py-50 bg-gradient-to-br from-purple-50">
+        <h1 className="text-5xl md:text-6xl mb-6 text-gray-9000 font-bold text-center">Impulsa tu marca al 
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-green-600"> siguiente nivel</span>
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 mx-auto max-w-3xl text-center ">Somos una agencia de marketing digital especializada en hacer crecer tu negocio a través de estrategias innovadoras y resultados medibles.</p>
+      </section>
+
+      <section className="py-20" id="servicios">
+        <div className="container mx-auto px-4">
+           <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">Ofrecemos soluciones integrales de marketing digital para hacer crecer tu negocio</p>
+           </div>
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {
+              servicios.map(elem => (
+                <ServicioCard key={elem.title} title={elem.title} span={elem.span} items={elem.items} />
+              ))
+            }
+           </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section id="nosotros" className="py-20 bg-gray-50">
+        <About/>
+      </section>
+
+      <section id="equipo" className="py-20"> 
+        <Team/>
+      </section>
+
+      <section id="form" className="bg-gradient-to-r from-cyan-800 to-green-600 fondo">
+        <Form/>
+      </section>
+
+      <footer id="contacto" className="py-20 bg-gray-900">
+        <Contacto />
       </footer>
-    </div>
-  );
+    </>
+  )
 }
+
+
+export default index
