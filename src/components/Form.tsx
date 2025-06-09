@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Form = () => {
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
   return (
