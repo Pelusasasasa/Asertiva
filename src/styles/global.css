@@ -1,7 +1,13 @@
 @import 'tailwindcss';
 
+html{
+    scroll-behavior: smooth;
+}
 
 .fondo{
     background-color: #155C3A;
-    
+}
+
+button.fondo:hover{
+    background-color: #319c69;
 }

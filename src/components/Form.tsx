@@ -1,6 +1,10 @@
 import React from 'react'
 
 export const Form = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
   return (
     <div className='container mx-auto px-4 max-w-4xl py-16'>
       <div className='flex flex-col'>
@@ -14,7 +18,7 @@ export const Form = () => {
         </div>
 
 
-        <form action="" className='grid md:grid-cols-2 gap-6 bg-white rounded-2xl p-8 shadow-2xl'>
+        <form onSubmit={handleSubmit} className='grid md:grid-cols-2 gap-6 bg-white rounded-2xl p-8 shadow-2xl'>
           <div>
             <label className='block text-sm font-medium text-gray-700 mb-2' htmlFor="">
               Nombre Completo * 
@@ -53,7 +57,7 @@ export const Form = () => {
           </div>
 
           <div className='md:col-span-2'>
-            <button className='fondo w-full py-2 text-lg rounded-lg text-white'>Enviar Consulta</button>
+            <button className='fondo w-full cursor-pointer hover:text-xl  py-2 text-lg rounded-lg text-white'>Enviar Consulta</button>
           </div>
         </form>
 

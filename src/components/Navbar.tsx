@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const { basePath } = useRouter();
   return (
     <header className="border-b-gray-200 border-b flex justify-between px-5">
       <div className="flex gap-2 items-center">
-        <Image alt="logo" src='/logo.jpg' height={50} width={50} className="rounded-full"/>
+        <Image alt="logo" src={`${basePath}/logo.jpg`} height={50} width={50} className="rounded-full"/>
         <p className="font-bold text-2xl">Acertiva</p>
       </div>
       <nav className="px-6 py-4">

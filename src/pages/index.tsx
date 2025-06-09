@@ -78,11 +78,11 @@ import { Team } from "@/components/Team"
         <Team/>
       </section>
 
-      <section id="form" className=" fondo">
+      <section id="contacto" className=" fondo">
         <Form/>
       </section>
 
-      <footer id="contacto" className="py-20 bg-gray-900">
+      <footer id="footer" className="py-20 bg-gray-900">
         <Contacto />
       </footer>
     </>

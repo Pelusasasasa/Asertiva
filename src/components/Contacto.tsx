@@ -1,13 +1,16 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 export const Contacto = () => {
+
+    const { basePath } = useRouter();
   return (
     <div className='container mx-auto px-10'>
         <div className='grid lg:grid-cols-4 mb-16 gap-5'>
             <div className='flex flex-col text-gray-400'>
                 <div className='flex gap-2 mb-5 items-center'>
-                    <Image width={600} height={400} alt='Logo Pie' src='/logo.jpg' className='w-10 h-10 rounded-full'/>
+                    <Image width={600} height={400} alt='Logo Pie' src={`${basePath}/logo.jpg`} className='w-10 h-10 rounded-full'/>
                     <h3 className=''>Asertiva</h3>
                 </div>
                 <p className='max-w-2xl'>
