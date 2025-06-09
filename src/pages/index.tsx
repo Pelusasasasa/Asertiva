@@ -3,11 +3,17 @@ import { Contacto } from "@/components/Contacto"
 import { Form } from "@/components/Form"
 import ServicioCard from "@/components/ServicioCard"
 import { Team } from "@/components/Team"
+import { CiPen } from "react-icons/ci"
+import { FiUsers } from "react-icons/fi"
+import { VscMegaphone } from "react-icons/vsc"
 
  const servicios = [
   {
     title: "Redes Sociales",
     span: "Gesiton completa de redes sociales y community management",
+    icon: VscMegaphone,
+    bgColorIcon: 'bg-pink-100',
+    textColorIcon: 'text-pink-600',
     items: [
       "Estrategia de contenido personalizada",
       "Community management profesional",
@@ -20,6 +26,9 @@ import { Team } from "@/components/Team"
   {
     title: "Consultoría Estratégica",
     span: "Asesoramiento personalizado para el crecimiento y posicionamiento de tu marca",
+    icon: FiUsers,
+    bgColorIcon: "bg-blue-100",
+    textColorIcon: "text-blue-600",
     items: [
       "Análisis de mercado y competencia",
       "Estrategia de marca y posicionamiento",
@@ -32,6 +41,9 @@ import { Team } from "@/components/Team"
   {
     title: "Diseño & Branding",
     span: "Creación de identidad visual única y materiales de comunicación impactantes",
+    icon: CiPen,
+    bgColorIcon: 'bg-green-100',
+    textColorIcon: 'text-green-600',
     items: [
       "Diseño de logotipos y marca",
       "Identidad corporativa completa",
@@ -63,7 +75,7 @@ import { Team } from "@/components/Team"
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {
               servicios.map(elem => (
-                <ServicioCard key={elem.title} title={elem.title} span={elem.span} items={elem.items} />
+                <ServicioCard key={elem.title} title={elem.title} span={elem.span} items={elem.items} icon={elem.icon} bgColorIcon={elem.bgColorIcon} textColorIcon={elem.textColorIcon}/>
               ))
             }
            </div>

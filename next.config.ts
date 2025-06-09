@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/Asertiva',
+  // basePath: '/Asertiva',
   trailingSlash: true,
 
   /* config options here */

@@ -23,7 +23,7 @@ export const About = () => {
             </main>
 
             <picture className='bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8'>
-                <Image className='w-full h-auto rounded-lg shadow-lg'  src={`${basePath}/about.jpg`} width={600}  height={400} alt='Agencia'/>
+                <Image className='w-full h-auto rounded-lg shadow-lg'  src={`${basePath}/About.jpg`} width={600}  height={400} alt='Agencia'/>
             </picture>
         </div>
     </div>
