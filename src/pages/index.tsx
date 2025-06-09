@@ -47,9 +47,9 @@ import { Team } from "@/components/Team"
  const index = () => {
   return (
     <>
-      <section className="to-pink-50 py-50 bg-gradient-to-br from-purple-50">
-        <h1 className="text-5xl md:text-6xl mb-6 text-gray-9000 font-bold text-center">Impulsa tu marca al 
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-green-600"> siguiente nivel</span>
+      <section className="to-green-100 py-50 bg-gradient-to-br from-green-100">
+        <h1 className="text-5xl md:text-6xl mb-6 text-gray-900 font-bold text-center">Impulsa tu marca al 
+          <span className="text-transparent bg-clip-text fondo"> siguiente nivel</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 mx-auto max-w-3xl text-center ">Somos una agencia de marketing digital especializada en hacer crecer tu negocio a través de estrategias innovadoras y resultados medibles.</p>
       </section>
@@ -78,7 +78,7 @@ import { Team } from "@/components/Team"
         <Team/>
       </section>
 
-      <section id="form" className="bg-gradient-to-r from-cyan-800 to-green-600 fondo">
+      <section id="form" className=" fondo">
         <Form/>
       </section>
 

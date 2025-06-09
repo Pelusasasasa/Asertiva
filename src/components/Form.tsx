@@ -53,7 +53,7 @@ export const Form = () => {
           </div>
 
           <div className='md:col-span-2'>
-            <button className='bg-gradient-to-r from-cyan-600 to-green-600 w-full py-2 text-lg rounded-lg text-white'>Enviar Consulta</button>
+            <button className='fondo w-full py-2 text-lg rounded-lg text-white'>Enviar Consulta</button>
           </div>
         </form>
 
