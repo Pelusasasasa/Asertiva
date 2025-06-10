@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <div className='container mx-auto'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
-            <main className='items-center'>
+            <main className='items-center text-center'>
                 <h2 className='text-4xl text-center font-bold text-gray-900 mb-4'>Sobre nuestra Agencia</h2>
                 <p className='text-xl text-gray-600 max-w-2xl mx-auto'>Somos una agencia especializada en redes sociales,
                     consultoría estratégica y diseño de marca. 
